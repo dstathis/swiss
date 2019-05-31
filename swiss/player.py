@@ -1,4 +1,6 @@
 class Player:
+    """A tournament player"""
+
     def __init__(self, name=None, info=None):
         self.name = name
         self.info = info or {}

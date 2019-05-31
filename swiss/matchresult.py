@@ -8,6 +8,7 @@ class InvalidResultError(Exception):
 
 
 class MatchResult:
+    """A base class for match results"""
     def __init__(self, main_result=None):
         if not isinstance(main_result, int):
             raise InvalidResultError()
@@ -15,6 +16,7 @@ class MatchResult:
 
 
 class MtgMatchResult(MatchResult):
+    """An MTG style match result"""
     def __init__(self, main_result=None, score=None):
         super(MatchResult, self).__init__(main_result)
         if (not isinstance(score, tuple)) or len(score) != 3:
@@ -23,7 +25,8 @@ class MtgMatchResult(MatchResult):
 
 
 class WhMatchResult(MatchResult):
-    def __init(self, main_result=None, score=None):
+    """A 40k style match result"""
+    def __init__(self, main_result=None, score=None):
         super(MatchResult, self).__init__(main_result)
         if (not isinstance(score, tuple)) or len(score) != 2:
             raise InvalidResultError()
