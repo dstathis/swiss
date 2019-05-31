@@ -1,2 +1,2 @@
-# swiss
+# Swiss
 Swiss Tournament Software
