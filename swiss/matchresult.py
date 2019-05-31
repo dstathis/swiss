@@ -2,6 +2,7 @@ WIN = 0
 LOSS = 1
 TIE = 2
 
+
 class InvalidResultError(Exception):
     pass
 
